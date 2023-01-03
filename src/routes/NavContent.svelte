@@ -5,9 +5,9 @@
 
 <Stack>
 	<Box css={{ bc: isDark ? '$blue400' : '$blue50', p: '$mdPX', br: '$lg', userSelect: 'none' }}>
-		<Text align="center">Dota2 Rising Star</Text>
+		<Anchor href='/'>Dota2 Rising Star</Anchor>
 	</Box>
 	<!-- <Anchor href="/">Home Page</Anchor>
 	<Anchor href="/test">Test Page</Anchor> -->
-  <Anchor href="/app">Svelte router link</Anchor>
+	<Anchor href="/app">Svelte router link</Anchor>
 </Stack>

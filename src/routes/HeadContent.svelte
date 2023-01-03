@@ -1,6 +1,6 @@
 <script lang="ts">
 	// import Logo from './favicon.png';
-	import { Group, ActionIcon, Text, Anchor, Burger, Tooltip, Switch } from '@svelteuidev/core';
+	import { Group, ActionIcon, Text, Burger, Tooltip } from '@svelteuidev/core';
 	import { Sun, Moon } from 'radix-icons-svelte';
 	import { hotkey, useOs } from '@svelteuidev/composables';
 	const os = useOs();
@@ -13,18 +13,12 @@
 
 <Group override={{ height: '100%', px: 20 }} position="apart">
 	<Burger {opened} on:click={toggleOpen} override={{ d: 'block', '@sm': { d: 'none' } }} />
-	<Anchor 
-		underline={false}
-		href="/"
-		override={{ '&:hover': { textDecoration: 'none !important' } }}
-	>
-		<Group>
-			<!-- <Logo size={35} /> -->
-			<Text color="blue" size="xl" override={{ d: 'none', '@sm': { d: 'block' } }}>
-				Dota2 Rising Star
-			</Text>
-		</Group>
-	</Anchor>
+	<Group>
+		<!-- <Logo size={35} /> -->
+		<Text color="blue" size="xl" override={{ d: 'none', '@sm': { d: 'block' } }}>
+			Dota2 Rising Star
+		</Text>
+	</Group>
 	<Tooltip label={`${mod} + J`}>
 		<ActionIcon variant="default" on:click={toggle} size={30} use={[[hotkey, [['mod+J', toggle]]]]}>
 			{#if isDark}
